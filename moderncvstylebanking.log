@@ -1,0 +1,564 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.12.29)  29 DEC 2015 12:47
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**moderncvstylebanking.sty
+(./moderncvstylebanking.sty
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+
+LaTeX Warning: You have requested package `',
+               but the package provides `moderncvstylebanking'.
+
+Package: moderncvstylebanking 2012/10/31 v1.2.0 modern curriculum vitae and let
+ter style scheme: banking
+(/usr/share/texmf/tex/latex/tex-gyre/tgpagella.sty
+Package: tgpagella 2009/09/27 v1.2 TeX Gyre Pagella as default roman family
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+))))
+
+./moderncvstylebanking.sty:46: LaTeX Error: \mobilesymbol undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \renewcommand*{\mobilesymbol}
+                                  {\marvosymbol{72}~}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:47: LaTeX Error: \phonesymbol undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.47 \renewcommand*{\phonesymbol}
+                                 {\marvosymbol{84}~}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:48: LaTeX Error: \faxsymbol undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \renewcommand*{\faxsymbol}
+                               {\marvosymbol{117}~}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:49: LaTeX Error: \emailsymbol undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \renewcommand*{\emailsymbol}
+                                 {\marvosymbol{66}~}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:50: LaTeX Error: \homepagesymbol undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \renewcommand*{\homepagesymbol}
+                                    {{\Large\marvosymbol{205}}~}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\maketitlebox=\box26
+\maketitletempbox=\box27
+\maketitlewidth=\skip41
+\maketitleboxwidth=\skip42
+
+./moderncvstylebanking.sty:61: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \newif\if@
+               firstmaketitleelement\@firstmaketitleelementtrue%
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no @ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+
+./moderncvstylebanking.sty:85: LaTeX Error: \maketitle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 \renewcommand*{\maketitle}
+                               {%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 61--107
+[]
+ []
+
+
+./moderncvstylebanking.sty:113: LaTeX Error: \namefont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 \renewcommand*{\namefont}
+                               {\Huge\bfseries\upshape}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:114: LaTeX Error: \titlefont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 \renewcommand*{\titlefont}
+                                {\Huge\mdseries\upshape}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:115: LaTeX Error: \addressfont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 \renewcommand*{\addressfont}
+                                  {\normalsize\mdseries\upshape}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:116: LaTeX Error: \quotefont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 \renewcommand*{\quotefont}
+                                {\large\slshape}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:117: LaTeX Error: \sectionfont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 \renewcommand*{\sectionfont}
+                                  {\Large\bfseries\upshape}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:118: LaTeX Error: \subsectionfont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 \renewcommand*{\subsectionfont}
+                                     {\large\upshape\fontseries{sb}\selectfont}
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:119: LaTeX Error: \hintfont undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 \renewcommand*{\hintfont}
+                               {\bfseries}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:122: LaTeX Error: \namestyle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 \renewcommand*{\namestyle}
+                                [1]{{\namefont\textcolor{color1}{#1}}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:123: LaTeX Error: \titlestyle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 \renewcommand*{\titlestyle}
+                                 [1]{{\titlefont\textcolor{color2!85}{#1}}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:124: LaTeX Error: \addressstyle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.124 \renewcommand*{\addressstyle}
+                                   [1]{{\addressfont\textcolor{color1}{#1}}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:125: LaTeX Error: \quotestyle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125 \renewcommand*{\quotestyle}
+                                 [1]{{\quotefont\textcolor{color1}{#1}}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:126: LaTeX Error: \sectionstyle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 \renewcommand*{\sectionstyle}
+                                   [1]{{\sectionfont\textcolor{color1}{#1}}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:127: LaTeX Error: \subsectionstyle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 \renewcommand*{\subsectionstyle}
+                                      [1]{{\subsectionfont\textcolor{color1}...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:128: LaTeX Error: \hintstyle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 \renewcommand*{\hintstyle}
+                                [1]{{\hintfont\textcolor{color0}{#1}}}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\quotewidth=\skip43
+\hintscolumnwidth=\skip44
+\separatorcolumnwidth=\skip45
+\maincolumnwidth=\skip46
+\doubleitemcolumnwidth=\skip47
+\listitemsymbolwidth=\skip48
+./moderncvstylebanking.sty:139: Undefined control sequence.
+<argument> \listitemsymbol 
+                           
+l.139 ...th{\listitemsymbolwidth}{\listitemsymbol}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\listitemmaincolumnwidth=\skip49
+\listdoubleitemmaincolumnwidth=\skip50
+
+./moderncvstylebanking.sty:144: LaTeX Error: \recomputecvlengths undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.144 \renewcommand*{\recomputecvlengths}
+                                         {%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:161: LaTeX Error: \makecvtitle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 \renewcommand*{\makecvtitle}
+                                  {%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:171: LaTeX Error: \section undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.171 \renewcommand*{\section}
+                              [1]{%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:180: LaTeX Error: \subsection undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.180 \renewcommand*{\subsection}
+                                 [1]{%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:187: LaTeX Error: \cvitem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 \renewcommand*{\cvitem}
+                             [3][.25em]{%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:191: LaTeX Error: \cvdoubleitem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191 \renewcommand*{\cvdoubleitem}
+                                   [5][.25em]{%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:197: LaTeX Error: \cvlistitem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.197 \renewcommand*{\cvlistitem}
+                                 [2][.25em]{%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:201: LaTeX Error: \cvlistdoubleitem undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.201 \renewcommand*{\cvlistdoubleitem}
+                                       [3][.25em]{%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:208: LaTeX Error: \cventry undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.208 \renewcommand*{\cventry}
+                              [7][.25em]{
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+\cvitemwithcommentmainbox=\box28
+\cvitemwithcommentmainlength=\skip51
+\cvitemwithcommentcommentlength=\skip52
+
+./moderncvstylebanking.sty:220: LaTeX Error: \cvitemwithcomment undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.220 \renewcommand*{\cvitemwithcomment}
+                                        [4][.25em]{%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:229: LaTeX Error: Environment thebibliography undefi
+ned.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.229 \renewenvironment{thebibliography}
+                                        [1]%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:258: LaTeX Error: \recomputeletterlengths undefined.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.258 \renewcommand*{\recomputeletterlengths}
+                                             {
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:262: LaTeX Error: \makelettertitle undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.262 \renewcommand*{\makelettertitle}
+                                      {%
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./moderncvstylebanking.sty:286: LaTeX Error: \makeletterclosing undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.286 \renewcommand*{\makeletterclosing}
+                                        {
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+! Emergency stop.
+<*> moderncvstylebanking.sty
+                            
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 486 strings out of 493105
+ 7847 string characters out of 6137071
+ 58351 words of memory out of 5000000
+ 4022 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,0n,21p,290b,15s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
