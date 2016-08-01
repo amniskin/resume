@@ -228,7 +228,9 @@
 %   itemize labels (the struts were added to correct inter-item spacing (works for single line items, until a solution is found for multi-line ones...)
 \newcommand*{\labelitemi}{\strut\textcolor{color1}{\marvosymbol{123}}}% equivalent to \Neutral from marvosym package; alternative: \fontencoding{U}\fontfamily{ding}\selectfont\tiny\symbol{'102}
 \newcommand*{\labelitemii}{\strut\textcolor{color1}{\large\bfseries-}}
-\newcommand*{\labelitemiii}{\strut\textcolor{color1}{\rmfamily\textperiodcentered}}% alternative: \textasteriskcentered; the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
+\newcommand*{\labelitemiii}{\strut\textcolor{color1}{\rmfamily\textperiodcentered}}
+%\newcommand*{\labelitemiii}{\strut\textcolor{color1}{\rmfamily\textasteriskcentered}}
+% alternative: \textasteriskcentered; the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
 \newcommand*{\labelitemiv}{\labelitemiii}
 %   enumerate labels
 \renewcommand{\theenumi}{\@arabic\c@enumi}
@@ -345,6 +347,10 @@
 % makes a resume line with 2 list items
 % usage: \cvlistdoubleitem[label]{item1}{item2}
 \newcommand*{\cvlistdoubleitem}[3][\listitemsymbol]{}
+
+% makes a resume line with 3 list items
+% usage: \cvlisttripleitem[label]{item1}{item2}{item3}
+\newcommand*{\cvlisttripleitem}[4][\listitemsymbol]{}
 
 % makes a typical resume job / education entry
 % usage: \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
