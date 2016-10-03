@@ -6,7 +6,7 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
-\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 \renewcommand{\labelitemi}{--}
@@ -20,7 +20,7 @@
 \familyname{Niskin}
 
 % All information in this block is optional, comment out any lines you don't need
-\title{Curriculum Vitae}
+%\title{Curriculum Vitae}
 \address{3415 Chase Ave}{Miami Beach, FL 33140}
 %\mobile{(305) 575 9217}
 \phone{(305) 894-6475}
@@ -36,7 +36,43 @@
 
 \begin{document}
 
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+\recipient{HR Department}{Blackrock\\40 East 52nd Street \\10022 New York, NY} % Letter recipient
+\date{\today} % Letter date
+\opening{Dear Sir or Madam,} % Opening greeting
+\closing{Sincerely yours,} % Closing phrase
+\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+\makelettertitle % Print letter title
+
+I am a first year graduate student in the Data Science program at the New College of Florida. I would like to spend my 2017 summer learning and  Internship with the Analyst Program at BlackRock. As a Mathematician entering the field of statistical computing and Machine Learning, there is no better place to be than Blackrock I believe I have the educational background, academic achievement, and passion to be an outstanding member of your team.
+
+I have previously worked full time as a content developer at XYZ. I was in the Quant team at XYZ where I got to hone my quantitative and analytical skills. As a part of my job I had to constantly communicate with the publishing and marketing team of the company which improved my communication and team leadership skills. In addition, at the University XYZ, I currently taking various courses in Fixed Income, Statistical Modelling, and Portfolio Management where I am learning various financial models and quantitative methods used in the finance industry. I believe that the theoretical and practical knowledge I gained from my graduate program along with my passion to learn new things, will enable me to significantly contribute to your company.
+
+I hope that you will find me well qualified for the Summer Intern Position and I would like to reiterate my strong interest to discuss this opportunity and my qualifications with you further.
+
+Thank you very much for your time and consideration.
+
+\makeletterclosing % Print letter signature
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+
+
 \makecvtitle % Print the CV title
+
+\section{Skills and Languages}
+\cvitem{Advanced}{\textsc{JavaScript}, \textsc{HTML}, \textsc{Python*}, \textsc{R*} | Spanish}
+\cvitem{Intermediate}{\textsc{Clojure}, \textsc{Scheme}, \textsc{Hoplon}, \textsc{CSS}, \textsc{MySQL}, \textsc{PostgreSQL}, \textsc{NodeJS} | Hebrew}
+\cvitem{Basic}{\textsc{Java}, \textsc{Haskell}, \textsc{MongoDB}, \textsc{Latex}, \textsc{Matlab}, \textsc{Octave} | German}
+ *Projected - based on current workload
+
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -45,22 +81,27 @@
 \section{Education}
 
 \cventry{2016--(2018)}{Master's In Data Science}{New College of Florida}{Sarasota}{}{}
-\cventry{2012--2015}{Bachelor of Science in Mathematics with Minors in Physics and English}{Florida International University}{Miami}{\textit{GPA -- 3.64 (3.79 in major) out of 4.00}}{Graduated Cum Laude}  % Arguments not required can be left empty
-\cventry{2010--2011}{Associate of Arts}{Miami Dade College}{Miami}{\textit{GPA -- 3.74 out of 4.00}}{Graduated with Honors}
+\cventry{2012--2015}{Bachelor of Science | Mathematics \hspace{1em} Minors | Physics and English}{Florida International University}{Miami}{}{
+  \begin{itemize}
+    \item Graduated Cum Laude \textit{GPA -- 3.64 (3.79 in major)}
+    \item Dean's List (6 times)
+  \end{itemize}}  % Arguments not required can be left empty
+  \cventry{2010--2011}{Associate of Arts}{Miami Dade College}{Miami}{}{
+    \begin{itemize}
+      \item Graduated with Honors \textit{GPA -- 3.74 out of 4.00}
+      \item Dean's List (5 times)
+      \item Phi Theta Kappa Honor Society Member
+      \item Physics Award
+    \end{itemize}}
 
-
-
-
-
-
-
+\begin{comment}
 \section{Academic Honors}
 
 \cvitem{}{Dean's List (6 times), Florida International University}
 \cvitem{}{Dean's List (5 times), Miami Dade College}
 \cvitem{}{Phi Theta Kappa Honor Society Membership, Miami Dade College}
 \cvitem{}{Physics Award, Miami Dade College}
-
+\end{comment}
 
 \begin{comment}
 \section{Masters Thesis}
@@ -69,7 +110,6 @@
 \cvitem{Supervisors}{Professor James Smith \& Associate Professor Jane Smith}
 \cvitem{Description}{This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.}
 \end{comment}
-
 
 \begin{comment}
 \section{Main Courses Taken}
@@ -146,11 +186,6 @@
 \end{itemize}}
 \end{comment}
 
-
-
-
-
-
 \begin{comment}
 \section{Other Relevant Courses Taken}
 \cvlistdoubleitem{Thermodynamics}{Mathematical Methods in Physics}
@@ -167,8 +202,7 @@
 \end{comment}
 
 \section{Experience}
-
-%\subsection{Vocational}
+\subsection{STEM}
 
 \begin{comment}
 \cventry{2004--2009}{Infantryman}{\textsc{US Army}}{}{}{}
@@ -176,78 +210,42 @@
 
 \cventry{2015--2016}{Computer Science Instructor}{\textsc{Florida Vocation Institute}}{Miami}{}{
   \begin{itemize}
-    \item Assisted in constructing the school's curriculum.
-    \item Taught courses in HTML, CSS, CSS-Frameworks, JavaScript, SQL, MongoDB, NodeJS, Functional-Programming, and Basic-Logic.
-    \item Designed a free online course intended to teach aspiring students about the above subjects through interesting projects (www.fvi-grad.com)
+    \item Taught and created syllabi for courses in HTML, CSS, CSS-Frameworks, JavaScript, SQL, MongoDB, NodeJS, Functional-Programming, and Basic-Logic
+    \item Created a free online course intended to teach aspiring students about the above subjects through interesting projects (currently live at www.fvi-grad.com)
   \end{itemize}}
-\cventry{2010--2015}{Math/Science/Computing Tutor}{\textsc{Wyzant}}{Miami}{}{
+\cventry{2010--2015}{Co-founder and Math/Science/Computing Tutor}{Math-Busters (www.Math-Busters.com)}{Miami}{}{
   \begin{itemize}
-    \item Cofounded a successful income generating tutoring company (www.Math-Busters.com)
-    \item Tutored all levels of students - from Elementary School to upper-level University students.
-    \item A five star rating on www.Wyzant.com with over 400 hours of Wyzant sessions logged.
+    \item Co-founded a successful income generating tutoring company (www.Math-Busters.com)
+    \item Tutored all levels of students - from Elementary School to upper-level University students
   \end{itemize}}
-\cventry{2006--2009}{Infantryman}{2\textsuperscript{nd} ID, US Army}{Fort Lewis, WA}{}{
+
+\subsection{Military}
+  \cventry{2006--2009}{Infantryman}{1\textsuperscript{st} Battalion of the 38\textsuperscript{th} Infantry Regiment, 2\textsuperscript{nd} ID, US Army}{Fort Lewis, WA}{}{
  \begin{itemize} %\itemsep -2pt  % reduce space between items
   \item Deployed to Iraq from 2007-2008
   \item Held positions as a Rifleman, M-240B assistant gunner, M-249 SAW gunner, Radio Telephone Operator, Grenadier, Designated Marksman, and a Team Leader.
   \item Combat Lifesaver certification
   \item Assisted in fighting the Tripod Complex forest fire in Winthrop, Washington.
  \end{itemize}}
-\cventry{2004--2006}{Civil Affairs Specialist}{US Army}{Perrine, FL}{}{
+ \cventry{2004--2006}{Civil Affairs Specialist}{478\textsuperscript{th} Civilian Affairs Battalion, US Army}{Perrine, FL}{}{
  \begin{itemize} %\itemsep -2pt  % reduce space between items
-  \item Trained in Special Operations weapons and tactics at the John F. Kennedy Special Warfare Center and School in Fort Bragg, NC for 6 months.
+  \item Trained at the John F. Kennedy Special Warfare Center and School in Fort Bragg, NC for 6 months.
   \item Obtained Secret Clearance
  \end{itemize}}
 %\cventry{2013--2014}{Math Dept. Learning Assistant}{\textsc{Florida International University}}{Miami}{}{}
 
-
-
-\section{Computer skills}
-\cvitem{Advanced}{\textsc{JavaScript}, \textsc{HTML}, \textsc{Python*}, \textsc{R*}}
-\cvitem{Intermediate}{\textsc{Clojure}, \textsc{Scheme}, \textsc{Hoplon}, \textsc{CSS}, \textsc{MySQL}, \textsc{PostgreSQL}, \textsc{NodeJS}}
-\cvitem{Basic}{\textsc{Java}, \textsc{Haskell}, \textsc{MongoDB}, \textsc{Latex}, \textsc{Matlab}, \textsc{Octave}}
- *Projected - based on current workload
-
-
-
-
+ \begin{comment}
 \section{Foreign Languages}
 %\cvlanguage{Native}{English}{}
 \cvlanguage{Advanced}{Spanish}{Conversationally fluent and literate}
 \cvlanguage{Intermediate}{Hebrew}{Conversationally fluent basic literacy}
 \cvlanguage{Basic}{German}{Basic words and phrases only}
 
-
-
 \section{Interests}
 \renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
 \cvlistdoubleitem{Guitar}{Problem Solving}
 \cvlistdoubleitem{Cooking}{Writing}
 \cvlistdoubleitem{Running}{Travel}
-
-
-
-%----------------------------------------------------------------------------------------
-%	COVER LETTER
-%----------------------------------------------------------------------------------------
-
-% To remove the cover letter, comment out this entire block
-\begin{comment}
-\clearpage
-
-\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
-\date{\today} % Letter date
-\opening{Dear Sir or Madam,} % Opening greeting
-\closing{Sincerely yours,} % Closing phrase
-\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
-
-\makelettertitle % Print letter title
-
-\lipsum[1-3] % Dummy text
-
-\makeletterclosing % Print letter signature
-
-%----------------------------------------------------------------------------------------
 \end{comment}
 
 \end{document}
