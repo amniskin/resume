@@ -163,6 +163,10 @@
 \newlength{\listitemmaincolumnwidth}
 \newlength{\listdoubleitemmaincolumnwidth}
 
+%% Triple col width added on 2017 Jan 23
+\newlength{\tripleitemcolumnwidth}
+\newlength{\listtripleitemmaincolumnwidth}
+
 % commands
 \renewcommand*{\recomputecvlengths}{%
   \setlength{\quotewidth}{0.65\textwidth}%
@@ -176,6 +180,14 @@
   % listdoubleitem lengths
   \setlength{\listdoubleitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
   \setlength{\listdoubleitemmaincolumnwidth}{0.5\listdoubleitemmaincolumnwidth}%
+
+  %% Triple col width added on 2017 Jan 23
+  \setlength{\tripleitemcolumnwidth}{\maincolumnwidth-\separatorcolumnwidth-\separatorcolumnwidth}%
+  \setlength{\tripleitemcolumnwidth}{0.3\tripleitemcolumnwidth}%
+  % listtripleitem lengths
+  \setlength{\listtripleitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
+  \setlength{\listtripleitemmaincolumnwidth}{0.3\listtripleitemmaincolumnwidth}%
+
   % fancyhdr lengths
   \renewcommand{\headwidth}{\textwidth}%
   % regular lengths
@@ -227,6 +239,19 @@
   \ifthenelse{\equal{#3}{}}%
     {}%
     {\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
+
+%%%% Added on 2017 23 Jan
+\renewcommand*{\cvlisttripleitem}[4][.25em]{%
+  \cvitem[#1]{}{\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#2\end{minipage}%
+  \hfill% fill of \separatorcolumnwidth
+  \ifthenelse{\equal{#3}{}}%
+    {}%
+    {\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#3\end{minipage}
+		\hfill
+		\ifthenelse{\equal{#4}{}}
+		{}
+		{\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#4\end{minipage}}}}}
+
 
 \renewcommand*{\cventry}[7][.25em]{
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
