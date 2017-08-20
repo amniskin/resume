@@ -35,25 +35,27 @@
 %  \setmathfont[range=\mathbfup,\mathbfsfup]{Tex-Gyre Pagella Bold}
 %  \setmathfont[range=\mathbfit,\mathbfsfit]{Tex-Gyre Pagella Bold Italic}
 %\else
-  \IfFileExists{tgpagella.sty}%
-    {%
-      \RequirePackage{tgpagella}%
-      \renewcommand*{\familydefault}{\rmdefault}}%
-    {}
-%\fi
+	\IfFileExists{tgpagella.sty}%
+		{%
+			\RequirePackage{tgpagella}%
+			\renewcommand*{\familydefault}{\rmdefault}}%
+		{}
+		%\fi
 
-% symbols
+		% symbols
 \renewcommand*{\mobilesymbol}{\marvosymbol{72}~}
 \renewcommand*{\phonesymbol}{\marvosymbol{84}~}
 \renewcommand*{\faxsymbol}{\marvosymbol{117}~}
 \renewcommand*{\emailsymbol}{\marvosymbol{66}~}
 \renewcommand*{\homepagesymbol}{{\Large\marvosymbol{205}}~}
+\renewcommand*{\gitsymbol}{\faGithub~}
+\renewcommand*{\linsymbol}{\faLinkedin~}
 
 % commands
 \newcommand*{\maketitlesymbol}{%
-    {~~~{\rmfamily\textbullet}~~~}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
-%   internal command to add an element to the footer
-%   it collects the elements in a temporary box, and checks when to flush the box
+	{~~~{\rmfamily\textbullet}~~~}}% the \rmfamily is required to force Latin Modern fonts when using sans serif, as OMS/lmss/m/n is not defined and gets substituted by OMS/cmsy/m/n
+	%   internal command to add an element to the footer
+	%   it collects the elements in a temporary box, and checks when to flush the box
 \newsavebox{\maketitlebox}%
 \newsavebox{\maketitletempbox}%
 \newlength{\maketitlewidth}%
@@ -62,77 +64,79 @@
 %   adds an element to the maketitle, separated by maketitlesymbol
 %   usage: \addtomaketitle[maketitlesymbol]{element}
 \newcommand*{\addtomaketitle}[2][\maketitlesymbol]{%
-  \if@firstmaketitleelement%
-    \savebox{\maketitletempbox}{\usebox{\maketitlebox}#2}%
-  \else%
-    \savebox{\maketitletempbox}{\usebox{\maketitlebox}#1#2}\fi%
-  \settowidth{\maketitleboxwidth}{\usebox{\maketitletempbox}}%
-  \ifnum\maketitleboxwidth<\maketitlewidth%
-    \savebox{\maketitlebox}{\usebox{\maketitletempbox}}%
-    \@firstmaketitleelementfalse%
-  \else%
-    \flushmaketitle{}\\%
-    \savebox{\maketitlebox}{#2}%
-    \savebox{\maketitletempbox}{#2}%
-    \settowidth{\maketitleboxwidth}{\usebox{\maketitlebox}}%
-    \@firstmaketitleelementfalse\fi}
-%   internal command to flush the maketitle
+	\if@firstmaketitleelement%
+		\savebox{\maketitletempbox}{\usebox{\maketitlebox}#2}%
+	\else%
+		\savebox{\maketitletempbox}{\usebox{\maketitlebox}#1#2}\fi%
+	\settowidth{\maketitleboxwidth}{\usebox{\maketitletempbox}}%
+	\ifnum\maketitleboxwidth<\maketitlewidth%
+		\savebox{\maketitlebox}{\usebox{\maketitletempbox}}%
+		\@firstmaketitleelementfalse%
+	\else%
+		\flushmaketitle{}\\%
+		\savebox{\maketitlebox}{#2}%
+		\savebox{\maketitletempbox}{#2}%
+		\settowidth{\maketitleboxwidth}{\usebox{\maketitlebox}}%
+		\@firstmaketitleelementfalse\fi}
+		%   internal command to flush the maketitle
 \newcommand*{\flushmaketitle}{%
-  \strut\usebox{\maketitlebox}%
-  \savebox{\maketitlebox}{}%
-  \savebox{\maketitletempbox}{}%
-  \setlength{\maketitleboxwidth}{0pt}}
-%\renewcommand*{\maketitle}{%
-%  \setlength{\maketitlewidth}{0.8\textwidth}%
-%  \hfil%
-%  \parbox{\maketitlewidth}{%
-%    \centering%
-%    % name and title
-%    \namestyle{\@firstname~\@familyname}%
-%    \ifthenelse{\isundefined{\@title}}{}{\titlestyle{~|~\@title}}\\%
-%    % detailed information
-%    \addressfont\color{color2}%
-%    \ifthenelse{\isundefined{\@addressstreet}}{}{\addtomaketitle{\addresssymbol\@addressstreet}%
-%      \ifthenelse{\equal{\@addresscity}{}}{}{\addtomaketitle[~--~]{\@addresscity}}\flushmaketitle\@firstmaketitleelementtrue\\}% if \addresstreet is defined, \addresscity will always be defined but could be empty
-%    \ifthenelse{\isundefined{\@mobile}}{}{\addtomaketitle{\mobilesymbol\@mobile}}%
-%    \ifthenelse{\isundefined{\@phone}}{}{\addtomaketitle{\phonesymbol\@phone}}%
-%    \ifthenelse{\isundefined{\@fax}}{}{\addtomaketitle{\faxsymbol\@fax}}%
-%    \ifthenelse{\isundefined{\@email}}{}{\addtomaketitle{\emailsymbol\emaillink{\@email}}}%
-%        \ifthenelse{\isundefined{\@homepage}}{}{%
-%	\ifthenelse{\equal{\@homepagetitle}{}}% \homepagetitle could be empty
-%	{\addtomaketitle{\homepagesymbol\httplink{\@homepage}}}%
-%	{\addtomaketitle{\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}}%
-%    \ifthenelse{\isundefined{\@extrainfo}}{}{\addtomaketitle{\@extrainfo}}%
-%    \flushmaketitle}\\[2.5em]}% need to force a \par after this to avoid weird spacing bug at the first section if no blank line is left after \maketitle
+	\strut\usebox{\maketitlebox}%
+	\savebox{\maketitlebox}{}%
+	\savebox{\maketitletempbox}{}%
+	\setlength{\maketitleboxwidth}{0pt}}
+	%\renewcommand*{\maketitle}{%
+	%  \setlength{\maketitlewidth}{0.8\textwidth}%
+	%  \hfil%
+	%  \parbox{\maketitlewidth}{%
+	%    \centering%
+	%    % name and title
+	%    \namestyle{\@firstname~\@familyname}%
+	%    \ifthenelse{\isundefined{\@title}}{}{\titlestyle{~|~\@title}}\\%
+	%    % detailed information
+	%    \addressfont\color{color2}%
+	%    \ifthenelse{\isundefined{\@addressstreet}}{}{\addtomaketitle{\addresssymbol\@addressstreet}%
+	%      \ifthenelse{\equal{\@addresscity}{}}{}{\addtomaketitle[~--~]{\@addresscity}}\flushmaketitle\@firstmaketitleelementtrue\\}% if \addresstreet is defined, \addresscity will always be defined but could be empty
+	%    \ifthenelse{\isundefined{\@mobile}}{}{\addtomaketitle{\mobilesymbol\@mobile}}%
+	%    \ifthenelse{\isundefined{\@phone}}{}{\addtomaketitle{\phonesymbol\@phone}}%
+	%    \ifthenelse{\isundefined{\@fax}}{}{\addtomaketitle{\faxsymbol\@fax}}%
+	%    \ifthenelse{\isundefined{\@email}}{}{\addtomaketitle{\emailsymbol\emaillink{\@email}}}%
+	%        \ifthenelse{\isundefined{\@homepage}}{}{%
+	%	\ifthenelse{\equal{\@homepagetitle}{}}% \homepagetitle could be empty
+	%	{\addtomaketitle{\homepagesymbol\httplink{\@homepage}}}%
+	%	{\addtomaketitle{\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}}%
+	%    \ifthenelse{\isundefined{\@extrainfo}}{}{\addtomaketitle{\@extrainfo}}%
+	%    \flushmaketitle}\\[2.5em]}% need to force a \par after this to avoid weird spacing bug at the first section if no blank line is left after \maketitle
 \renewcommand*{\maketitle}{%
-  \setlength{\maketitlewidth}{0.8\textwidth}%
-  \hfil%
-  \parbox{\maketitlewidth}{%
-    \centering%
-    % name and title
-    \namestyle{\@firstname~\@familyname}%
-    \ifthenelse{\equal{\@title}{}}{\titlestyle{~}}{\titlestyle{~|~\@title}}\\%
-    % detailed information
-    \addressfont\color{color2}%
-    \ifthenelse{\isundefined{\@addressstreet}}{}{\addtomaketitle{\addresssymbol\@addressstreet}%
-      \ifthenelse{\equal{\@addresscity}{}}{}{\addtomaketitle[~--~]{\@addresscity}}\flushmaketitle\@firstmaketitleelementtrue\\}% if \addresstreet is defined, \addresscity will always be defined but could be empty
-    \ifthenelse{\isundefined{\@mobile}}{}{\addtomaketitle{\mobilesymbol\@mobile}}%
-    \ifthenelse{\isundefined{\@phone}}{}{\addtomaketitle{\phonesymbol\@phone}}%
-    \ifthenelse{\isundefined{\@fax}}{}{\addtomaketitle{\faxsymbol\@fax}}%
-    \ifthenelse{\isundefined{\@email}}{}{\addtomaketitle{\emailsymbol\emaillink{\@email}}}%
-        \ifthenelse{\isundefined{\@homepage}}{}{%
-	\ifthenelse{\equal{\@homepagetitle}{}}% \homepagetitle could be empty
-	{\addtomaketitle{\homepagesymbol\httplink{\@homepage}}}%
-	{\addtomaketitle{\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}}%
-    \ifthenelse{\isundefined{\@extrainfo}}{}{\addtomaketitle{\@extrainfo}}%
-    \flushmaketitle}\\[2.5em]}% need to force a \par after this to avoid weird spacing bug at the first section if no blank line is left after \maketitle
+	\setlength{\maketitlewidth}{0.6\textwidth}%
+	\hfil%
+	\parbox{\maketitlewidth}{
+		\centering%
+		% name and title
+		\namestyle{\@firstname~\@familyname}%
+		\ifthenelse{\equal{\@title}{}}{\titlestyle{~}}{\titlestyle{~|~\@title}}\\%
+		% detailed information
+		\addressfont\color{color2}%
+		\ifthenelse{\isundefined{\@addressstreet}}{}{\addtomaketitle{\addresssymbol\@addressstreet}%
+			\ifthenelse{\equal{\@addresscity}{}}{}{\addtomaketitle[~--~]{\@addresscity}}\flushmaketitle\@firstmaketitleelementtrue\\}% if \addresstreet is defined, \addresscity will always be defined but could be empty
+		\ifthenelse{\isundefined{\@mobile}}{}{\addtomaketitle{\mobilesymbol\@mobile}}%
+		\ifthenelse{\isundefined{\@phone}}{}{\addtomaketitle{\phonesymbol\@phone}}%
+		\ifthenelse{\isundefined{\@fax}}{}{\addtomaketitle{\faxsymbol\@fax}}
+		\ifthenelse{\isundefined{\@email}}{}{\addtomaketitle{\emailsymbol\emaillink{\@email}}}
+		\ifthenelse{\isundefined{\@homepage}}{}{
+			\ifthenelse{\equal{\@homepagetitle}{}}{
+				\addtomaketitle{\homepagesymbol\httplink{\@homepage}}}{
+				\addtomaketitle{\homepagesymbol\httplink[\@homepagetitle]{\@homepage}}}}
+		\ifthenelse{\isundefined{\@github}}{}{\addtomaketitle{\httplink[\gitsymbol\@github]{www.github.com/\@github}}}
+		\ifthenelse{\isundefined{\@linkedin}}{}{\addtomaketitle{\httplink[\linsymbol\@linkedin]{www.linkedin.com\@linkedin}}}
+		\ifthenelse{\isundefined{\@extrainfo}}{}{\addtomaketitle{\@extrainfo}}
+		\flushmaketitle}\\[1.5em]}% need to force a \par after this to avoid weird spacing bug at the first section if no blank line is left after \maketitle
 
 
 
-%-------------------------------------------------------------------------------
-%                resume style definition
-%-------------------------------------------------------------------------------
-% fonts
+		%-------------------------------------------------------------------------------
+		%                resume style definition
+		%-------------------------------------------------------------------------------
+		% fonts
 \renewcommand*{\namefont}{\Huge\bfseries\upshape}
 \renewcommand*{\titlefont}{\Huge\mdseries\upshape}
 \renewcommand*{\addressfont}{\normalsize\mdseries\upshape}
@@ -169,178 +173,178 @@
 
 % commands
 \renewcommand*{\recomputecvlengths}{%
-  \setlength{\quotewidth}{0.65\textwidth}%
-  % main lenghts
-  \setlength{\maincolumnwidth}{\textwidth}%
-  % listitem lengths
-  \setlength{\listitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth}%
-  % doubleitem lengths
-  \setlength{\doubleitemcolumnwidth}{\maincolumnwidth-\separatorcolumnwidth}%
-  \setlength{\doubleitemcolumnwidth}{0.5\doubleitemcolumnwidth}%
-  % listdoubleitem lengths
-  \setlength{\listdoubleitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
-  \setlength{\listdoubleitemmaincolumnwidth}{0.5\listdoubleitemmaincolumnwidth}%
+	\setlength{\quotewidth}{0.65\textwidth}%
+	% main lenghts
+	\setlength{\maincolumnwidth}{\textwidth}%
+	% listitem lengths
+	\setlength{\listitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth}%
+	% doubleitem lengths
+	\setlength{\doubleitemcolumnwidth}{\maincolumnwidth-\separatorcolumnwidth}%
+	\setlength{\doubleitemcolumnwidth}{0.5\doubleitemcolumnwidth}%
+	% listdoubleitem lengths
+	\setlength{\listdoubleitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
+	\setlength{\listdoubleitemmaincolumnwidth}{0.5\listdoubleitemmaincolumnwidth}%
 
-  %% Triple col width added on 2017 Jan 23
-  \setlength{\tripleitemcolumnwidth}{\maincolumnwidth-\separatorcolumnwidth-\separatorcolumnwidth}%
-  \setlength{\tripleitemcolumnwidth}{0.3\tripleitemcolumnwidth}%
-  % listtripleitem lengths
-  \setlength{\listtripleitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
-  \setlength{\listtripleitemmaincolumnwidth}{0.3\listtripleitemmaincolumnwidth}%
+	%% Triple col width added on 2017 Jan 23
+	\setlength{\tripleitemcolumnwidth}{\maincolumnwidth-\separatorcolumnwidth-\separatorcolumnwidth}%
+	\setlength{\tripleitemcolumnwidth}{0.3\tripleitemcolumnwidth}%
+	% listtripleitem lengths
+	\setlength{\listtripleitemmaincolumnwidth}{\maincolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth-\separatorcolumnwidth-\listitemsymbolwidth}%
+	\setlength{\listtripleitemmaincolumnwidth}{0.3\listtripleitemmaincolumnwidth}%
 
-  % fancyhdr lengths
-  \renewcommand{\headwidth}{\textwidth}%
-  % regular lengths
-  \setlength{\parskip}{0\p@}}
+	% fancyhdr lengths
+	\renewcommand{\headwidth}{\textwidth}%
+	% regular lengths
+	\setlength{\parskip}{0\p@}}
 
 \renewcommand*{\makecvtitle}{%
-  % recompute lengths (in case we are switching from letter to resume, or vice versa)
-  \recomputecvlengths%
-  \maketitle%
-  % optional quote
-  \ifthenelse{\isundefined{\@quote}}%
-    {}%
-    {{\centering\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
-  \par}% to avoid weird spacing bug at the first section if no blank line is left after \maketitle}
+	% recompute lengths (in case we are switching from letter to resume, or vice versa)
+	\recomputecvlengths%
+	\maketitle%
+	% optional quote
+	\ifthenelse{\isundefined{\@quote}}%
+		{}%
+		{{\centering\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
+			\par}% to avoid weird spacing bug at the first section if no blank line is left after \maketitle}
 
 \renewcommand*{\section}[1]{%
-  \par\addvspace{2.5ex}%
-  \phantomsection{}% reset the anchor for hyperrefs
-  \addcontentsline{toc}{section}{#1}%
-  \strut\sectionstyle{#1}%
-  {\color{color1}\hrule}%
-  \par\nobreak\addvspace{1ex}\@afterheading}
+	\par\addvspace{2.5ex}%
+	\phantomsection{}% reset the anchor for hyperrefs
+	\addcontentsline{toc}{section}{#1}%
+	\strut\sectionstyle{#1}%
+	{\color{color1}\hrule}%
+	\par\nobreak\addvspace{1ex}\@afterheading}
 
 \newcommand{\subsectionfill}{\xleaders\hbox to 0.35em{\scriptsize.}\hfill}% different subsectionfills will not be perfectly aligned, but remaining space at the end of the fill will be distributed evenly between leaders, so it will be barely visible
 \renewcommand*{\subsection}[1]{%
-  \par\addvspace{1ex}%
-  \phantomsection{}%
-  \addcontentsline{toc}{subsection}{#1}%
-  \strut\subsectionstyle{#1}{\color{color1}{\subsectionfill}}%
-  \par\nobreak\addvspace{0.5ex}\@afterheading}
+	\par\addvspace{1ex}%
+	\phantomsection{}%
+	\addcontentsline{toc}{subsection}{#1}%
+	\strut\subsectionstyle{#1}{\color{color1}{\subsectionfill}}%
+	\par\nobreak\addvspace{0.5ex}\@afterheading}
 
 \renewcommand*{\cvitem}[3][.25em]{%
-  \ifthenelse{\equal{#2}{}}{}{\hintstyle{#2}: }{#3}%
-  \par\addvspace{#1}}
+	\ifthenelse{\equal{#2}{}}{}{\hintstyle{#2}: }{#3}%
+	\par\addvspace{#1}}
 
 \renewcommand*{\cvdoubleitem}[5][.25em]{%
-  \begin{minipage}[t]{\doubleitemcolumnwidth}\hintstyle{#2}: #3\end{minipage}%
-  \hfill% fill of \separatorcolumnwidth
-  \begin{minipage}[t]{\doubleitemcolumnwidth}\ifthenelse{\equal{#4}{}}{}{\hintstyle{#4}: }#5\end{minipage}%
-  \par\addvspace{#1}}
+	\begin{minipage}[t]{\doubleitemcolumnwidth}\hintstyle{#2}: #3\end{minipage}%
+		\hfill% fill of \separatorcolumnwidth
+	\begin{minipage}[t]{\doubleitemcolumnwidth}\ifthenelse{\equal{#4}{}}{}{\hintstyle{#4}: }#5\end{minipage}%
+		\par\addvspace{#1}}
 
 \renewcommand*{\cvlistitem}[2][.25em]{%
-  \listitemsymbol\begin{minipage}[t]{\listitemmaincolumnwidth}#2\end{minipage}%
-  \par\addvspace{#1}}
+	\listitemsymbol\begin{minipage}[t]{\listitemmaincolumnwidth}#2\end{minipage}%
+		\par\addvspace{#1}}
 
 \renewcommand*{\cvlistdoubleitem}[3][.25em]{%
-  \cvitem[#1]{}{\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
-  \hfill% fill of \separatorcolumnwidth
-  \ifthenelse{\equal{#3}{}}%
-    {}%
-    {\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
+	\cvitem[#1]{}{\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+		\hfill% fill of \separatorcolumnwidth
+	\ifthenelse{\equal{#3}{}}%
+		{}%
+		{\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
 
-%%%% Added on 2017 23 Jan
-\renewcommand*{\cvlisttripleitem}[4][.25em]{%
-  \cvitem[#1]{}{\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#2\end{minipage}%
-  \hfill% fill of \separatorcolumnwidth
-  \ifthenelse{\equal{#3}{}}%
-    {}%
-    {\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#3\end{minipage}
-		\hfill
+			%%%% Added on 2017 23 Jan
+			\renewcommand*{\cvlisttripleitem}[4][.25em]{%
+				\cvitem[#1]{}{\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#2\end{minipage}%
+					\hfill% fill of \separatorcolumnwidth
+	\ifthenelse{\equal{#3}{}}%
+		{}%
+		{\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#3\end{minipage}
+			\hfill
 		\ifthenelse{\equal{#4}{}}
 		{}
 		{\listitemsymbol\begin{minipage}[t]{\listtripleitemmaincolumnwidth}#4\end{minipage}}}}}
 
 
-\renewcommand*{\cventry}[7][.25em]{
-  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
-	  {\bfseries #4} & {\bfseries #5} \\%
-	  {\itshape #3\ifthenelse{\equal{#6}{}}{}{, #6}} & {\itshape #2}\\%
-  \end{tabular*}%
-  \ifx&#7&%
-    \else{\\\vbox{\small#7}}\fi%
-  \par\addvspace{#1}}
+			\renewcommand*{\cventry}[7][.25em]{
+				\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}%
+					{\bfseries #4} & {\bfseries #5} \\%
+					{\itshape #3\ifthenelse{\equal{#6}{}}{}{, #6}} & {\itshape #2}\\%
+				\end{tabular*}%
+	\ifx&#7&%
+		\else{\\\vbox{\small#7}}\fi%
+	\par\addvspace{#1}}
 
 \newbox{\cvitemwithcommentmainbox}
 \newlength{\cvitemwithcommentmainlength}
 \newlength{\cvitemwithcommentcommentlength}
 \renewcommand*{\cvitemwithcomment}[4][.25em]{%
-  \savebox{\cvitemwithcommentmainbox}{\ifthenelse{\equal{#2}{}}{}{\hintstyle{#2}: }#3}%
-  \setlength{\cvitemwithcommentmainlength}{\widthof{\usebox{\cvitemwithcommentmainbox}}}%
-  \setlength{\cvitemwithcommentcommentlength}{\maincolumnwidth-\separatorcolumnwidth-\cvitemwithcommentmainlength}%
-  \begin{minipage}[t]{\cvitemwithcommentmainlength}\ifthenelse{\equal{#2}{}}{}{\hintstyle{#2}: }#3\end{minipage}%
-  \hfill% fill of \separatorcolumnwidth
-  \begin{minipage}[t]{\cvitemwithcommentcommentlength}\raggedleft\small\itshape#4\end{minipage}%
-  \par\addvspace{#1}}
+	\savebox{\cvitemwithcommentmainbox}{\ifthenelse{\equal{#2}{}}{}{\hintstyle{#2}: }#3}%
+	\setlength{\cvitemwithcommentmainlength}{\widthof{\usebox{\cvitemwithcommentmainbox}}}%
+	\setlength{\cvitemwithcommentcommentlength}{\maincolumnwidth-\separatorcolumnwidth-\cvitemwithcommentmainlength}%
+	\begin{minipage}[t]{\cvitemwithcommentmainlength}\ifthenelse{\equal{#2}{}}{}{\hintstyle{#2}: }#3\end{minipage}%
+		\hfill% fill of \separatorcolumnwidth
+	\begin{minipage}[t]{\cvitemwithcommentcommentlength}\raggedleft\small\itshape#4\end{minipage}%
+		\par\addvspace{#1}}
 
 \renewenvironment{thebibliography}[1]%
-  {%
-    \bibliographyhead{\refname}%
-%    \small%
-    \begin{list}{\bibliographyitemlabel}%
-      {%
-        \setlength{\topsep}{0pt}%
-        \setlength{\labelwidth}{0pt}%
-        \setlength{\labelsep}{0pt}%
-        \leftmargin\labelwidth%
-        \advance\leftmargin\labelsep%
-        \@openbib@code%
-        \usecounter{enumiv}%
-        \let\p@enumiv\@empty%
-        \renewcommand\theenumiv{\@arabic\c@enumiv}}%
-        \sloppy\clubpenalty4000\widowpenalty4000%
-%        \sfcode`\.\@m%
-%        \sfcode `\=1000\relax%
-  }%
-  {%
-    \def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
-    \end{list}%
-  }
+	{%
+		\bibliographyhead{\refname}%
+		%    \small%
+		\begin{list}{\bibliographyitemlabel}%
+			{%
+				\setlength{\topsep}{0pt}%
+				\setlength{\labelwidth}{0pt}%
+				\setlength{\labelsep}{0pt}%
+				\leftmargin\labelwidth%
+				\advance\leftmargin\labelsep%
+				\@openbib@code%
+				\usecounter{enumiv}%
+				\let\p@enumiv\@empty%
+				\renewcommand\theenumiv{\@arabic\c@enumiv}}%
+				\sloppy\clubpenalty4000\widowpenalty4000%
+				%        \sfcode`\.\@m%
+				%        \sfcode `\=1000\relax%
+			}%
+			{%
+				\def\@noitemerr{\@latex@warning{Empty `thebibliography' environment}}%
+		\end{list}%
+	}
 
 
-%-------------------------------------------------------------------------------
-%                letter style definition
-%-------------------------------------------------------------------------------
-% commands
+	%-------------------------------------------------------------------------------
+	%                letter style definition
+	%-------------------------------------------------------------------------------
+	% commands
 \renewcommand*{\recomputeletterlengths}{
-  \recomputecvlengths%
-  \setlength{\parskip}{6\p@}}
+	\recomputecvlengths%
+	\setlength{\parskip}{6\p@}}
 
 \renewcommand*{\makelettertitle}{%
-  % recompute lengths (in case we are switching from letter to resume, or vice versa)
-  \recomputeletterlengths%
-  % sender block
-  \maketitle%
-  \par%
-   % recipient block
-  \begin{minipage}[t]{.5\textwidth}
-    \raggedright%
-    \addressfont%
-    {\bfseries\upshape\@recipientname}\\%
-    \@recipientaddress%
-  \end{minipage}
-  % date
-  \hfill % US style
-%  \\[1em] % UK style
-  \@date\\[2em]% US informal style: "April 6, 2006"; UK formal style: "05/04/2006"
-  % opening
-  \raggedright%
-  \@opening\\[1.5em]%
-  % ensure no extra spacing after \makelettertitle due to a possible blank line
-%  \ignorespacesafterend% not working
-  \hspace{0pt}\par\vspace{-\baselineskip}\vspace{-\parskip}}
+	% recompute lengths (in case we are switching from letter to resume, or vice versa)
+	\recomputeletterlengths%
+	% sender block
+	\maketitle%
+	\par%
+	% recipient block
+	\begin{minipage}[t]{.5\textwidth}
+		\raggedright%
+		\addressfont%
+		{\bfseries\upshape\@recipientname}\\%
+		\@recipientaddress%
+	\end{minipage}
+	% date
+	\hfill % US style
+	%  \\[1em] % UK style
+	\@date\\[2em]% US informal style: "April 6, 2006"; UK formal style: "05/04/2006"
+	% opening
+	\raggedright%
+	\@opening\\[1.5em]%
+	% ensure no extra spacing after \makelettertitle due to a possible blank line
+	%  \ignorespacesafterend% not working
+	\hspace{0pt}\par\vspace{-\baselineskip}\vspace{-\parskip}}
 
 \renewcommand*{\makeletterclosing}{
-  \@closing\\[3em]%
-  {\bfseries \@firstname~\@familyname}%
-  \ifthenelse{\isundefined{\@enclosure}}{}{%
-    \\%
-    \vfill%
-    {\color{color2}\itshape\enclname: \@enclosure}}}
+	\@closing\\[3em]%
+	{\bfseries \@firstname~\@familyname}%
+	\ifthenelse{\isundefined{\@enclosure}}{}{%
+		\\%
+		\vfill%
+		{\color{color2}\itshape\enclname: \@enclosure}}}
 
 
-\endinput
+	\endinput
 
 
-%% end of file `moderncvstylebanking.sty'.
+	%% end of file `moderncvstylebanking.sty'.
