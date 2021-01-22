@@ -6,8 +6,10 @@
 
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
-\moderncvstyle{banking} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvstyle{banking}
+% CV theme - 'casual', 'classic', 'oldstyle', 'banking'
+\moderncvcolor{blue}
+% CV color - 'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
 
 \renewcommand{\labelitemi}{--}
 \usepackage{comment, amsmath, amssymb, fontawesome}
@@ -74,13 +76,6 @@
 
 \makecvtitle % Print the CV title
 
-%%% {{{ Skills/Languages
-\section{Skills and Languages}
-\cvitem{Advanced}{Spanish | \textsc{Statistical Analysis}, \textsc{Portfolio Construction}, \textsc{Signals Research}}
-\cvitem{Intermediate}{Hebrew | \textsc{Programming}, \textsc{Software Design}, \textsc{Cloud Architecture}}
-\cvitem{Basic}{German, Russian | \textsc{Front End Security}, \textsc{Code Optimization}}
-%%% }}}
-
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
@@ -88,7 +83,7 @@
 %%% {{{ Education
 \section{Education}
 \cventry{2016--2018}{Master of Science In Data Science}{New College of Florida}{Sarasota}{}{}
-\cventry{2012--2015}{Bachelor of Science in Mathematics \hspace{0.5em}-\hspace{0.5em} Minors in Physics and English}{Florida International University}{Miami}{}{
+\cventry{2012--2015}{Bachelor of Science in Mathematics}{Florida International University}{Miami}{Minors in Physics and English}{
 	%% \cvlistdoubleitem{Graduated Cum Laude \textit{GPA -- 3.64 (3.79 in major)}}{Dean's List (6 times)}
  	\begin{itemize}
  		\item Graduated Cum Laude \textit{GPA -- 3.64 (3.79 in major)}
@@ -215,7 +210,7 @@
 	\cventry{}{Classical Mechanics}{(2 semesters)}{}{}{
 		\begin{itemize}
 			\item Euler-Lagrange equations, Lagrangian Mechanics
-			\item Orbital Mechanics, System Dynamics, Collisions and Scattering, Noninertial Reference Frames, Rigid Body Rotation, Coupled Oscillators Normal Coordinates, and Wave Motion.
+			\item Orbital Mechanics, System Dynamics, Collisions and Scattering, Noninertial Reference Frames, Rigid Body Rotation, Coupled Oscillators Normal Coordinates, and Wave Motion
 		\end{itemize}}
 \end{comment}
 %%% }}}
@@ -236,17 +231,18 @@
 \subsection{Finance}
 \cventry{2018-Present}{Quantitative Researcher}{\textsc{BlackRock Inc.}}{San Francisco, CA}{Systematic Active Equity}{
 	\begin{itemize}
-		\item Implemented signals using a wide variety of algorithms including Linear Models, GBM, Neural Networks, KNN, etc.
-		\item Implemented contextual embeddings (e.g. Bert, GPT-3, etc.) for various NLP tasks.
-		\item Researched and put into production signals driving over \$100M of daily trades.
-		\item Produced signals using all kinds of datasets, including alternative, fundamental, and text-based.
-		\item Focused on US Equities, but conducted research for global equities markets.
-		\item Focused on Stock Selection, but also conducted macro-economic, industry, country, factor-timing, and signal-combination research.
+		\item Implemented signals using a variety of algorithms including Linear Models, GBM, Neural Networks, KNN, etc.
+		\item Implemented contextual embeddings (e.g. Bert, GPT-3, etc.) for various NLP tasks
+		\item Researched and put into production signals driving over \$100M of daily trades
+		\item Produced signals using all kinds of datasets, including alternative, fundamental, and text-based
+		\item Focused on US Equities, but conducted research for global equity markets
+		\item Focused on Stock Selection, but also conducted macro-economic, industry, country, factor-timing, and signal-combination research
 	\end{itemize}}
-\cventry{2017}{Summer Analyst}{\textsc{BlackRock Inc.}}{San Francisco, CA}{Scientific Active Equity}{
+\cventry{2017}{Summer Analyst (Intern)}{\textsc{BlackRock Inc.}}{San Francisco, CA}{Scientific Active Equity}{
 	\begin{itemize}
 		\item Assessed the viability of using automated machine learning for alpha generation research
-		\item Developed a variable importance assessor for black box machine learning models
+		\item Assessed a variety of variable importance and model explanation algorithms for use in black-box models
+		\item Developed a Bayesian variable importance assessor for black box machine learned models
 	\end{itemize}}
 %%% }}}
 
@@ -254,11 +250,11 @@
 \subsection{STEM}
 \cventry{2015--2016}{Computer Science Instructor}{\textsc{Florida Vocation Institute}}{Miami, FL}{}{
 	\begin{itemize}
-		\item Taught and created syllabi for several courses and created a free online course (currently live at www.fvi-grad.com)
+		\item Created and taught syllabi for several courses and created a free online course
 	\end{itemize}}
-\cventry{2010--2015}{Co-founder and Math/Science/Computing Tutor}{Math-Busters (www.Math-Busters.com)}{Miami, FL}{}{
+\cventry{2010--2015}{Co-founder and Math/Science/Computing Tutor}{Math-Busters (math-busters.com)}{Miami, FL}{}{
 	\begin{itemize}
-		\item Tutored all levels of students and maintained a perfect rating with 100+ ratings and 450+ hours logged
+		\item Tutored all levels while maintaining a perfect rating with 100+ ratings and 450+ hours logged
 	\end{itemize}}
 %%%}}}
 
@@ -280,7 +276,7 @@
 		\end{itemize}}
 \end{comment}
 
-\cventry{2004--2009}{Infantryman}{1-38 Infantry Regiment, 4/2 ID, US Army}{Fort Lewis, WA}{}{
+\cventry{2004--2009}{Infantryman}{US Army}{Fort Lewis, WA}{1-38 Infantry Regiment, 4/2 ID}{
 	\begin{itemize} %\itemsep -2pt  % reduce space between items
 		\item Deployed to Iraq for OIF V from 2007-2008 and fought forest fires in Winthrop, Washington
 		\item Trained at the John F. Kennedy Special Warfare Center and School in Fort Bragg, NC
@@ -288,5 +284,12 @@
 	\end{itemize}}
 %%%}}}
 %%%}}}
+
+%%% {{{ Skills/Languages
+\section{Skills and Languages}
+\cvitem{Advanced}{Spanish | \textsc{Statistical Analysis}, \textsc{Portfolio Construction}, \textsc{Signals Research}}
+\cvitem{Intermediate}{Hebrew | \textsc{Programming}, \textsc{Software Design}, \textsc{Cloud Architecture}}
+\cvitem{Basic}{German, Russian | \textsc{Front End Security}, \textsc{Code Optimization}}
+%%% }}}
 
 \end{document}
