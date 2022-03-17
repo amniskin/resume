@@ -359,7 +359,6 @@
 % makes a typical resume job / education entry
 % usage: \cventry[spacing]{years}{degree/job title}{institution/employer}{localization}{optionnal: grade/...}{optional: comment/job description}
 \newcommand*{\cventry}[7][.25em]{}
-% \newcommand*{\workplace}[2][.25em]{}
 
 \newcommand*{\workplace}[4][.25em]{
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -369,12 +368,12 @@
 
 \newcommand*{\workposition}[4][.25em]{
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    {\textit{#2}} & \ifthenelse{\equal{#3}{}}{}{\textit{#3}, }\textit{#4}
+    {\textit{#2}}\ifthenelse{\equal{#3}{}}{}{, \textit{#3}} & \textit{#4}
   \end{tabular*}
 }
 
-\newcommand*{\workinfo}[2][leftmargin=300em]{
-  \vspace{-5mm}  % itemize adds 5mm space so this removes it
+\newcommand*{\workinfo}[2][-5mm]{
+  \vspace{#1}  % itemize adds 5mm space so this removes it
   \small
   \begin{itemize}[leftmargin=3em]
       \setlength\itemsep{-0.1em}
